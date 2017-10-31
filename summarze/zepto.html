@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="first"></li>
+        <li class="second"></li>
+        <li class="third"></li>
+    </ul>
+</body>
+<script src="js/zepto.js"></script>
+<script>
+    $(function(){
+        // console.log($('.first'));
+        var one=document.getElementsByTagName('li');
+        for(var i=0;i<one.length;i++){
+            //console.log(one[i].matches('.first'));
+        }
+        var str=function(){
+            return 1;
+        };
+       $.isFunction(str);
+    })
+</script>
+</html>
