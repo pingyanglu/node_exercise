@@ -96,3 +96,22 @@
 	
 
 `
+
+10. 谷歌浏览改变默认填充色
+
+
+`
+
+	input:-webkit-autofill {
+	  -webkit-animation-name: autofill;
+	  -webkit-animation-fill-mode: both;
+	}
+	@-webkit-keyframes autofill {
+	  to {
+	    color: #fff;
+	    background: transparent;
+	  }
+	}
+
+
+`
