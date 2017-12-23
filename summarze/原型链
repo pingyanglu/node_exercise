@@ -1,0 +1,40 @@
+//原型链原理
+function parent(){
+			this.abc=123;
+		}
+		parent.prototype={
+			say:function(){
+
+			}
+		}
+		var children=new parent();
+		console.dir(parent);
+		console.dir(children);   console.log(children.__proto__==parent.prototype);
+		console.log(parent.__proto__==Function.prototype);
+		console.log(Function.__proto__==Function.prototype);
+		console.log(Function.prototype==Object.__proto__);
+		console.dir(Function);
+		console.log(Function.prototype==Object.__proto__);
+		console.dir(Object.prototype==Function.prototype.__proto__);
+
+
+		console.log(Function.prototype.__proto__==Object.prototype);   
+		console.log(parent.__proto__==Function.prototype);
+
+		console.log(children.__proto__==parent.prototype);
+
+
+		console.log(parent.prototype.__proto__==Object.prototype);
+		console.log(Function.prototype.__proto__==Object.prototype);
+		console.log(parent.prototype.__proto__==Function.prototype.__proto__);
+
+
+		console.dir(parent.prototype);
+		console.dir(parent.__proto__);
+
+children.__proto__  -> parent.prototype ->
+							   parent.prototype.__proto__ ->  Object.prototype
+							   parent.__proto__ ->  Function.prototype  ->
+							   					    Function.prototype.__proto__ -> Object.prototype
+							   					    Function.__proto__  ->  Function.prototype
+							   					   						   Function.prototype.__proto__ ->Object.prototype
